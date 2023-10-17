@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  pg-categories-db:
+    container_name: pg-categories-db
+    image: postgres:12-alpine
+    restart: on-failure
+    ports:
+      - "${HW4_DB_PORT}:5432"
+    environment:
+      POSTGRES_USER: ${HW4_DB_USERNAME}
+      POSTGRES_PASSWORD: ${HW4_DB_PASSWORD}
+      POSTGRES_DB: ${HW4_DB_NAME}
+  pg-categories-test-db:
+    container_name: pg-categories-test-db
+    image: postgres:12-alpine
+    restart: on-failure
+    ports:
+      - "${HW4_DB_TEST_PORT}:5432"
+    environment:
+      POSTGRES_USER: ${HW4_DB_TEST_USERNAME}
+      POSTGRES_PASSWORD: ${HW4_DB_TEST_PASSWORD}
+      POSTGRES_DB: ${HW4_DB_TEST_NAME}

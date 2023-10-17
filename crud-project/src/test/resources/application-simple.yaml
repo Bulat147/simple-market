@@ -1,0 +1,15 @@
+project:
+  repository:
+    fileImplementation:
+      enabled: true
+  holderFileDirectory: products-test
+  holderFileName: products-test.csv
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: ${HW4_DB_TEST_USERNAME}
+    password: ${HW4_DB_TEST_PASSWORD}
+    url: jdbc:postgresql://${HW4_DB_TEST_HOST}:${HW4_DB_TEST_PORT}/${HW4_DB_TEST_NAME}
+    hikari:
+      maximum-pool-size: 20

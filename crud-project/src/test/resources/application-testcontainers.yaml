@@ -1,0 +1,11 @@
+
+spring:
+  datasource:
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+
+project:
+  repository:
+    fileImplementation:
+      enabled: true
+  holderFileDirectory: products-test
+  holderFileName: products-test.csv

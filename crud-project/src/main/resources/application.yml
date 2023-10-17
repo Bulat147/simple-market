@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+project:
+  repository:
+    fileImplementation:
+      enabled: false
+  holderFileDirectory: products
+  holderFileName: products.csv
+
+spring:
+  liquibase:
+    change-log: db/changelog/db.changelog-master.yaml
+    enabled: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: ${HW4_DB_USERNAME}
+    password: ${HW4_DB_PASSWORD}
+    url: jdbc:postgresql://${HW4_DB_HOST}:${HW4_DB_PORT}/${HW4_DB_NAME}
+    hikari:
+      maximum-pool-size: 20
+    
+
